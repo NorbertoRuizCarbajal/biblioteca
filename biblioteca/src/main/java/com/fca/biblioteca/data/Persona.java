@@ -1,9 +1,18 @@
 package com.fca.biblioteca.data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "persona")
 public class Persona {
-    private int id;
+    @Id
+    @Column(name = "idPersona")
+    private int idPersona;
+    @Column(name = "nombre")
     private String nombre;
+    @Column(name = "primerApellido")
     private String primerApellido;
+    @Column(name = "segundoApellido")
     private String segundoApellido;
 
     // Getters y Setters

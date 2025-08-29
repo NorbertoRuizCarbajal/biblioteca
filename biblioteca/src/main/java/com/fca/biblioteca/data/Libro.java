@@ -1,14 +1,26 @@
 package com.fca.biblioteca.data;
-import java.time.LocalDate;
+import java.time.Year;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "libro")
 public class Libro {
 
+    @Id
+    @Column(name = "idLibro")
     private int idLibro;
+    @Column(name = "titulo")
     private String titulo;
-    private LocalDate fechaPublicacion;
+    @Column(name = "anioPublicacion")
+    private Year anioPublicacion;
+    @Column(name = "editorial")
     private String editorial;
+    @Column(name = "edicion")
     private int edicion;
+    @Column(name = "isbn")
     private String isbn;
+    @Column(name = "existencia")
     private int existencias;
 
     // Getters y Setters

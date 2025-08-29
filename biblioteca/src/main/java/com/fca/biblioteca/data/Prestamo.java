@@ -1,13 +1,22 @@
 package com.fca.biblioteca.data;
 import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "prestamo")
 public class Prestamo {
-
+    @Id
+    @Column(name = "idPrestamo")
     private int idPrestamo;
+    @Column(name = "idPersona")
     private int idPersona;
+    @Column(name = "idLibro")
     private int idLibro;
-    private LocalDate fechaInicio;
-    private LocalDate fechaFin;
+    @Column(name = fechaPrestamo)
+    private LocalDate fechaPrestamo;
+    @Column(name = "diasPrestamo")
+    private int diasPrestamo;
 
     // Getters y Setters
     public int getIdPrestamo() {
@@ -37,22 +46,11 @@ public class Prestamo {
         this.idLibro = idLibro;
     }
 
-    public LocalDate getFechaInicio() {
-
-        return fechaInicio;
-    }
-    public void setFechaInicio(LocalDate fechaInicio) {
-
-        this.fechaInicio = fechaInicio;
+    public LocalDate getFechaPrestamo() {
+        return fechaPrestamo;
     }
 
-    public LocalDate getFechaFin() {
-
-        return fechaFin;
+    public void setFechaPrestamo(LocalDate fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
     }
-    public void setFechaFin(LocalDate fechaFin) {
-
-        this.fechaFin = fechaFin;
-    }
-
 }//Fin Prestamo

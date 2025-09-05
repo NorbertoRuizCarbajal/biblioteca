@@ -17,7 +17,7 @@ public class Libro {
     @Column(name = "editorial")
     private String editorial;
     @Column(name = "edicion")
-    private int edicion;
+    private String edicion;
     @Column(name = "isbn")
     private String isbn;
     @Column(name = "existencia")
@@ -51,11 +51,11 @@ public class Libro {
         this.editorial = editorial;
     }
 
-    public int getEdicion() {
+    public String getEdicion() {
 
         return edicion;
     }
-    public void setEdicion(int edicion) {
+    public void setEdicion(String edicion) {
 
         this.edicion = edicion;
     }

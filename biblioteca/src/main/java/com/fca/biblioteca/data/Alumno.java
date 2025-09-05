@@ -6,7 +6,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "alumno")
-public class Alumno extends Persona{
+public class Alumno {
 
     @Id
     @Column(name = "idAlumno")

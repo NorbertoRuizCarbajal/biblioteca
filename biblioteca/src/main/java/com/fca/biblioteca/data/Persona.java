@@ -1,6 +1,14 @@
 package com.fca.biblioteca.data;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.metamodel.SingularAttribute;
+import org.springframework.data.jpa.domain.AbstractPersistable;
+
+import java.io.Serializable;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Entity
 @Table(name = "persona")
@@ -16,13 +24,13 @@ public class Persona {
     private String segundoApellido;
 
     // Getters y Setters
-    public int getId() {
+    public SingularAttribute<AbstractPersistable, Serializable> getId() {
 
         return id;
     }
     public void setId(int id) {
 
-        this.id = id;
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {

@@ -1,6 +1,6 @@
 package com.fca.biblioteca.data;
 import java.time.LocalDate;
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,7 +13,7 @@ public class Prestamo {
     private int idPersona;
     @Column(name = "idLibro")
     private int idLibro;
-    @Column(name = fechaPrestamo)
+    @Column(name = "fechaPrestamo")
     private LocalDate fechaPrestamo;
     @Column(name = "diasPrestamo")
     private int diasPrestamo;

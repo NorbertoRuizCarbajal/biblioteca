@@ -1,7 +1,7 @@
 package com.fca.biblioteca.data;
 import java.time.Year;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "libro")
